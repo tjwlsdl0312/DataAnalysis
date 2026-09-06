@@ -82,7 +82,7 @@ https://www.youtube.com/watch?v=D46j-e_IHlI&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 
 ## 02. 구글 코랩과 주피터 노트북
 
-구글 코랩: 클라우드 웹 온라인 버전, 온라인 에디터
+구글 코랩: 클라우드 웹 온라인 버전, 온라인 에디터  
 주피터 노트북: 내 컴퓨터 오프라인 버전
 
 **구글 코랩** 
@@ -99,7 +99,8 @@ https://www.youtube.com/watch?v=D46j-e_IHlI&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 
 **코랩에서 데이터 확인 및 분석**
 
-- csv 파일: 한 줄이 하나의 레코드(row)로, 레코드는 콤마로 구분된 여러 필드(coloum)로 구성됨 ;comma separated values(메모장 연결할 시 확인 가능)
+- csv 파일: 한 줄이 하나의 레코드(row)로, 레코드는 콤마로 구분된 여러 필드(coloum)로 구성됨  
+;comma separated values(메모장 연결할 시 확인 가능)
 - 파이썬에서는 그냥 엑셀 말고 csv 쓰자  
 
 - gdown(), open(), readline(), chardet.detect(), 
