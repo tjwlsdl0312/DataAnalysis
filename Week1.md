@@ -62,21 +62,21 @@ https://www.youtube.com/watch?v=D46j-e_IHlI&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 
 **데이터 분석을 위한 도구** = 소프트웨어(<-프로그래밍 언어)
 
-1. 프로그래밍 언어: 파이, R (SQL-> 데이터가 데이터베이스 형태로 있다면 사용 가능)
+1. 프로그래밍 언어: 파이썬, R (SQL-> 데이터가 데이터베이스 형태로 있다면 사용 가능)
 - 파이썬: 표준 언어 취급, 머신러닝 관련 패키지를 다루기 용이
 - R: 통계 관련 패키지를 다루기 용이, 데이터 수집, 전처리 등은 까다롭
 
-1. 파이썬 필수 패키지(라이브러리) to PyPI ... R to CRAN
+2. 파이썬 필수 패키지(라이브러리) to PyPI ... R to CRAN
 - 넘파이 NumPy : 다차원 배열 for 과학계산
 - 판다스 pandas : 데이터프레임(숫자+문자->표) for 데이터 처리 및 분석
 - 맷플롯립 matplotlib : 데이터 시각화
 - 사이파이 SciPy : 수학 과학 계산 Ex. 미분, 적분, 확률, 선형대수, 최적화...
 - 사이킷런 scikit-learn : for 머신러닝 (넘파이, 사이파이에 의존ㅇ)
 
-1. 프로그래밍 환경: 구글 코랩
+3. 프로그래밍 환경: 구글 코랩
 
-외) 
-데이터 마이닝(Mining): 데이터에서 패턴이나 지식을 추출하는 작업 for 사람의 의사결정
+외)  
+데이터 마이닝(Mining): 데이터에서 패턴이나 지식을 추출하는 작업 for 사람의 의사결정  
 머신러닝: 데이터에서 자동으로 규칙을 학습하여(by 컴퓨터) 문제를 해결하는 소프트웨어(=모델)를 만드는 기술 (딥러닝이 머신러닝 알고리즘의 한 종류)
 
 
@@ -88,7 +88,7 @@ https://www.youtube.com/watch?v=D46j-e_IHlI&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 **구글 코랩** 
 
 - 노트북/코랩 메모장: 코랩 파일(ipynb)
-- 셀: 코드 셀(셀 하나 실행 시 Ctrl+Enter / 연속 셀 실행 시 Shift+Enter / 실행 순서 주의) 
+- 셀: 코드 셀(셀 하나 실행 시 Ctrl+Enter / 연속 셀 실행 시 Shift+Enter / 실행 순서 주의)  
   vs 텍스트 셀(마크다운, HTML 혼용 사용 가능)
 - 깃허브에서 불러오기 가능
 
@@ -100,12 +100,12 @@ https://www.youtube.com/watch?v=D46j-e_IHlI&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 **코랩에서 데이터 확인 및 분석**
 
 - csv 파일: 한 줄이 하나의 레코드(row)로, 레코드는 콤마로 구분된 여러 필드(coloum)로 구성됨 ;comma separated values(메모장 연결할 시 확인 가능)
-- 파이썬에서는 그냥 엑셀 말고 csv 쓰자
+- 파이썬에서는 그냥 엑셀 말고 csv 쓰자  
 
 - gdown(), open(), readline(), chardet.detect(), 
-- 인코딩: 문자 인코딩은 컴퓨터가 이해할 수 있는 0과 1의 이진(binary) 형태로 바꾸는 것 Ex. UTF-8, EUC-KR
+- 인코딩: 문자 인코딩은 컴퓨터가 이해할 수 있는 0과 1의 이진(binary) 형태로 바꾸는 것 Ex. UTF-8, EUC-KR  
 
-- read_csv(), head(), to_csv()
+- read_csv(), head(), to_csv()  
 - 데이터 프레임, 시리즈(같은 데이터 타입의 한 줄), 데이터타입(정수형, 문자열...)
 
 
