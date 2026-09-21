@@ -38,18 +38,68 @@ https://www.youtube.com/watch?v=hhbzUEQWdTg&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 
 ## 01. 불필요한 데이터 삭제하기
 
-<!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+- 데이터 정제: 데이터에서 손상되거나 부정확한 부분을 수정하고, 불필요한 데이터를 삭제하거나 불완전한 값을 교체하는 등의 작업 -> 데이터 랭글링, 데이터 먼징   
+-> 판다스 데이터 프레임의 여러 기능 익히기
+
+**열 삭제하기**
+- loc 메서드 슬라이싱 -> 인덱스로 특정 범위 내에서만 가능
+- 불리언 배열 및 drop() -> 지정 후 중간 열도 삭제 가능
+- dropna() -> 결측값 있는 열 제거 가능
+
+**행 삭제하기**
+- drop() 
+- [] 연산자를 통한 슬라이싱
+- [] 연사자와 불리언 배열 -> 조건 추가
+
+**중복된 행 찾기**
+- duplicated() + subset으로 기준 지정
+
+**그룹별로 모으기**
+- groupby() -> 결측값 미삭제 주의
+
+**원본 데이터 업데이트하기**
+- update() 후 reset_index() -> 업데이트. 리셋 후 인덱스 재설정
+
 
 ## 02. 잘못된 데이터 수정하기
 
-<!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+-> NaN을 확인하는 방법 및 결측값 채우는 방법
 
+**데이터 프레임 정보 요약 확인하기**
+- info()로 정상치들 확인 / isna() +sum() 으로 결측치 확인
+- None 과 astype() / -> np.nan to NaN
+
+**누락된 값 바꾸기 123**
+- loc, fillna() -> 빈 문자열로 변환 후, 열 선택후 해당 열만 변환 가능
+-  replace() -> 바꾸려는 값이 
+    - 1개(원래의 값, 새로운 값)
+    - 2개 이상([원래 값1, 원래 값2]
+    - [새로운 값1][새로운 값2]), 열 마다({열 이름: 원래 값}, 새로운 값)
+
+**정규 표현식**
+- \d -> 숫자찾기 ; ex. 네 자리 연도 \d\d\d\d / 두 자리 묶을 시 \d\d(\d\d)
+- . -> 문자찾기 ;.*(글자 미지정) / \s(공백) / 그룹화(\) 후 \1\2 로 간편화 가능
+
+**잘못된 값 바꾸기**
+- contains() -> 정수형 중 문자열이 하나라도 껴있음 탐색 불가 
+- gt() -> 괄호안의 값보다 더 큰 값 찾기 great than? <-> lt() =!= eq() 
+
+- \ 이거 코드 중 치면 아랫코드와 이어진다는 의미..
 
 # 2️⃣ 수행 인증
 
 <!-- 교재에서 안내된 과정을 직접 실행해본 뒤, 진행 결과가 보이도록 4~6장의 스크린샷을 캡처하여 아래에 첨부해주세요.-->
 <!-- 이번 주차에는 API를 발급받는 과정도 포함하여 첨부해주세요.-->
 
+![week3image-1](images/week3image-1.png)
+![week3image-2](images/week3image-2.png)
+![week3image-3](images/week3image-3.png)
+![week3image-4](images/week3image-4.png)
+![week3image-5](images/week3image-5.png)
+![week3image-6](images/week3image-6.png)
+
+API
+![week3plus](images/week3api.png)
 
 <br>
 <br>
@@ -118,7 +168,8 @@ https://www.youtube.com/watch?v=hhbzUEQWdTg&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 ```
 
 ```
-여기에 선택한 답과 그 이유를 간단히 서술해주세요!
+- 답: 3번  
+- 이유:df3의 왼쪽인 df1에서는 col1을 기준으로, 오른쪽인 df2에서는 coild3를 기준으로 삼았기 때문에 'left_on='col1', right_on='col3''와 같은 코드가 필요하다. 또한 df3에서 확인했을 때 두 데이터프레임은 합집합으로 합쳐졌기 때문에 양쪽 모두에 존재하는 x, y 뿐만 아니라 각각 한쪽 데이터프레임에만 존재하는 z, w도 함께 가져오기 위해 'how='outer''을 사용한다.
 ```
 
 
