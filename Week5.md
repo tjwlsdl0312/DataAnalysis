@@ -165,8 +165,6 @@ ex. count_by_year = ns_book7['발행년도'].value_counts()
 ```
 
 ```
-여기에 코드를 작성해주세요!
-```
 import matplotlib.pyplot as plt
 
 x = [1, 2, 3, 4, 5]
@@ -177,6 +175,7 @@ plt.title('Linear Trend')
 plt.xlabel('X values')
 plt.ylabel('Y values')
 plt.show()
+```
 
 
 ### 🎉 수고하셨습니다.
