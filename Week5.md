@@ -85,20 +85,65 @@ https://www.youtube.com/watch?v=deYY4xHsI0o&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 >**set一xlab이() 메서드와 set一ylab이0 메서드** = x, y축 이름 넣기   
 > ex. axs[0].set_xlabel('number of books')   
 >   axs[0].set_ylabel('borrow count')
->
->
-
 
 
 ## 02. 선 그래프와 막대 그래프 그리기
 
-<!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+- 선 그래프 = 데이터 포인트 사이를 선으로 이은 그래프
+- 막대 그래프 = 데이터 포인트의 크기를 막대 높이로 나타내는 그래프   
+
+산점도(전체 데이터의 형태를 가늠) vs 선/막대(한 축을 따라 어떤 데이터의 변화를 가늠)
+
+**value_counts() 메서드** = 한 열에서 고유한 값의 등장 횟수를 계산    
+ex. count_by_year = ns_book7['발행년도'].value_counts()
+
+### 선 그래프 그리기
+
+>**plt.plot()** = 선 그래프 그리기
+>
+>**linestyle 매개변수** = 선 모양을 지정   
+> - 실선: '-'
+> - 점선: ':'
+> - 쇄선: '_.'
+> - 파선: '--'
+>
+>**color 매개변수** = 색 지정 by 컬러코드/색상명   
+>marker 매개변수도 사용 가능   
+> -> plt.plot(count_by_year, marker='.', linestyle=':', color='red')를 pit.plot (count_by_year, ‘.:r')로 쓸 수 있음(축약 가능)
+>
+>**annotate() 함수** = 그래프의 특정 위치에 텍스트 추가   
+>ex. plt.annotate(val, (idx, val)) 처럼 (그래프에 나타낼 문자열, 텍스트가 나타날 x,y 좌표) 형태로 작성
+>
+>- **xytext 매개변수** = 텍스트의 위치 기본 조정   
+>- **textcoords 매개변수** = 그래도 안되면 상대적 위치로 포인트 지정  
+> ex. plt.annotate(val, (idx, val), xytext=(2, 2), textcoords='offset points') 
+
+### 막대 그래프 그리기
+
+>**plt.bar()** = 막대 그래프 그리기
+>
+>- annotate() 함수
+>   - **ha 매개변수** = 텍스트의 정렬(각 막대의 값)
+>   - **fontsize 매개변수** = 텍스트 크기 조정
+>   - color 매개변수
+>
+>- **width 매개변수** = 막대의 두께 조절(기본값 0.8)
+>
+>**plt.barh()** = 가로 막대 그래프 그리기(x,y축 이름 바꿔야댐..)
+>
+>- **height 매개변수** = 가로 막대 그래프용 막대의 두께 설정
+>- **va 매개변수** = 가로 막대 그래프용 텍스트 정렬 ...
+
 
 
 # 2️⃣ 수행 인증
 
-<!-- 교재에서 안내된 과정을 직접 실행해본 뒤, 진행 결과가 보이도록 4~6장의 스크린샷을 캡처하여 아래에 첨부해주세요.-->
-
+![1](images/week5image-1.png)
+![2](images/week5image-2.png)
+![3](images/week5image-3.png)
+![6](images/week5image-6.png)
+![4](images/week5image-4.png)
+![5](images/week5image-5.png)
 
 
 <br>
@@ -122,7 +167,16 @@ https://www.youtube.com/watch?v=deYY4xHsI0o&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 ```
 여기에 코드를 작성해주세요!
 ```
+import matplotlib.pyplot as plt
 
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+
+plt.plot(x, y, marker = '*', color = 'orange')
+plt.title('Linear Trend')
+plt.xlabel('X values')
+plt.ylabel('Y values')
+plt.show()
 
 
 ### 🎉 수고하셨습니다.
