@@ -38,7 +38,57 @@ https://www.youtube.com/watch?v=deYY4xHsI0o&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 
 ## 01. 맷플롯립 기본 요소 알아보기
 
-<!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+그래프를 예쁘게 정확하게 표현해보자:   
+맷플롯립 그래프와 피규어, rcParams, 서브플롯    
+
+
+### Figure 객체
+
+> - scatter() 함수로 산점도 그릴 때는 자동으로 피겨 객체가 생성됨
+> - 근데 figure() 함수로 명시적으로 피겨 객체 만들어서 활용하면 다양한 그래프 옵션을 조절할 수 있다네
+>
+>**plt.figure()** = 피겨 객체 만들어서 그래프 옵션을 조절하자
+>
+>**figsize 매개변수** = 튜플로 그래프의 크기를 지정하기   
+>-> 튜플 = 소괄호()로 표현하고, 리스트와 비슷하게 생김. 튜플 객체는 한번 생성하면 삭제하거나 수정 불가   
+>ex. plt.figure(figsize=(9,6))   
+>- 기본 그래프의 크기는 (6,4) -> 숫자 변경해서 크기 조절
+>- DPI 확인 후 600/72 등으로 정확하게 크기 설정 가능
+>- '%config InlineBackend.print_figure_kwargs = {'bbox_inches': None}' 선 작성으로 공백을 최소화 / 'tight'로 다시 백(~지금까지 계속 크기 키워오기 작업)
+>
+>**dpi 매개변수** - 로 그래프 크기 바꾸기 (figsize는 기본값 그대로)   
+>ex. plt.figure(dpi=144) ; 방법은 같다   
+
+### rcParams 객체
+
+>- 맷플롯립 그래프의 기본값을 관리하는 객체 
+>- 출력 뿐만 아니라 값 자체를 바꾸고, 이후에 그려지는 모든 그래프에 바뀐 설정이 적용됨
+>
+>**marker 매개변수** = 그래프의 마커 속성 확인/지정   
+>ex. plt.scatter(nsbook_7['도서권수'], ns_book7['대출건수'], alpha=0.1, marker='+') 
+
+### 여러 개의 서브플롯 출력하기
+
+>- 하나의 피겨 객체 안에는 여러 개의 서브플롯을 담을 수 있음
+>- 서브플롯 = Axes 클래스의 객체 
+>- 하나의 서브플롯은 두 개 이상의 축을 포함; 눈금/틱이 표시됨; 축의 이름 = 레이블   
+>
+> **subplots()** = 원하는 서브플롯 개수를 지정해서 그리자   
+>ex. fig, axs = plt.subplots(2) ; 이후에 axs[0] 해서 옵션 설정 고고
+> -> 0 넣으면 첫 번째 그래프, 1 넣으면 두 번째 그래프 대상...  
+>
+> 여러 개 넣을 때 **가로**로 넣기   
+> ex. fig, axs = plt.subplots(**1,2,** figsize=(10, 4))
+>
+>**set_title() 메서드** = 제목 넣기   
+> ex. axs[0].set_title('scatter plot')   
+>**set一xlab이() 메서드와 set一ylab이0 메서드** = x, y축 이름 넣기   
+> ex. axs[0].set_xlabel('number of books')   
+>   axs[0].set_ylabel('borrow count')
+>
+>
+
+
 
 ## 02. 선 그래프와 막대 그래프 그리기
 
