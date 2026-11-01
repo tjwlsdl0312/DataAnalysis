@@ -58,7 +58,7 @@ https://www.youtube.com/watch?v=NTQ5NXelOfw&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 > rc(설정할 그룹, 그룹 하위 속성) / 다양한 설정 가능(폰트 크기 등)
 
 **산점도를 그리고 개선해보자**   
-> **마커 조절**   
+**마커 조절**   
 > - s 매개변수: 마커 크기를 조절    
 > - alpha 매개변수: 투명도 조절  
 > - edgecolor 매개변수: 마커 테두리 색 바꾸기   
@@ -133,8 +133,10 @@ https://www.youtube.com/watch?v=NTQ5NXelOfw&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 여기에 코랩 링크를 첨부해주세요!
 (제출 전, 코랩의 공유 설정을 ‘링크가 있는 모든 사용자가 보기 가능’으로 변경했는지 반드시 확인해주세요.)
 
-https://colab.research.google.com/drive/1kQ2VCI03g9ANc1NU0g3NESyR2VvPEuW_?usp=sharing
 ```
+
+https://colab.research.google.com/drive/1kQ2VCI03g9ANc1NU0g3NESyR2VvPEuW_?usp=sharing
+
 
 
 
